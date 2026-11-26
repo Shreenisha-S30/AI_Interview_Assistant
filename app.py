@@ -20,4 +20,4 @@ role = st.selection("Select Job Role", [
   "Machine Learning Engineer",
   "Software Engineer",
   "HR Executive"
-  )]
+])
