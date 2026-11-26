@@ -21,3 +21,14 @@ role = st.selectbox("Select Job Role", [
   "Software Engineer",
   "HR Executive"
 ])
+#generate interview questions
+if st.button("Generate Interview Questions"):
+  prompt = "Generate 5 interview questions for the role of " + role
+
+response = client.chat.completion.create(
+  model= "qwen/qwen3.8-27b",
+  messages= [
+    {"role": "system", "content": "You are an expert technical interviewer"},
+    {"role": "user", "content": prompt}
+    ]
+)
