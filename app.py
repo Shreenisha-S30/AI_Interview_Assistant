@@ -21,9 +21,16 @@ role = st.selectbox("Select Job Role", [
   "Software Engineer",
   "HR Executive"
 ])
+#difficulty level
+difficulty = st.selectbox("Select the difficulty level", [
+  "Easy",
+  "Medium",
+  "Hard",
+  "Advance"
+  )]
 #generate interview questions
 if st.button("Generate Interview Questions"):
-  prompt = "Generate 5 interview questions for the role of " + role
+  prompt = "Generate 5 interview questions for the role of " + role + difficulty
   response = client.chat.completions.create(
     model= "qwen/qwen3.8-27b",
     messages= [
