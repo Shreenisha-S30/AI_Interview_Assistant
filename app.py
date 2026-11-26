@@ -23,9 +23,8 @@ role = st.selectbox("Select Job Role", [
 ])
 #difficulty level
 difficulty = st.selectbox("Select the difficulty level", [
-  "Easy",
-  "Medium",
-  "Hard",
+  "Beginner",
+  "Intermediate",
   "Advance"
 ])
 #generate interview questions
