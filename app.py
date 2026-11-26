@@ -32,3 +32,6 @@ response = client.chat.completion.create(
     {"role": "user", "content": prompt}
     ]
 )
+output = response.choices[0].message.content
+
+st.write(output)
