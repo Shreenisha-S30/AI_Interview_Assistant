@@ -29,7 +29,7 @@ difficulty = st.selectbox("Select the difficulty level", [
 ])
 #generate interview questions
 if st.button("Generate Interview Questions"):
-  prompt = "Generate 5 interview questions for the role of " + role + "with" + difficulty
+  prompt = "Generate 5 interview questions for the role of " + role + difficulty
   response = client.chat.completions.create(
     model= "qwen/qwen3.8-27b",
     messages= [
